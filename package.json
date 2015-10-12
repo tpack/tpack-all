@@ -1,0 +1,22 @@
+{
+    "name": "tpack-processed",
+    "version": "1.0.0",
+    "description": "排除已解析过的文件",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/tpack/tpack-processed.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tpack/tpack-processed/issues",
+        "email": "xuld@vip.qq.com"
+    },
+    "author": {
+        "name": "xuld",
+        "email": "xuld@vip.qq.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "tpack": "*",
+        "processed": "*"
+    }
+}
