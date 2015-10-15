@@ -1,21 +1,9 @@
-﻿tpack-less
+﻿tpack-all
 ===========================================
 
-提供 LESS 解析支持
+包含 TPACK 所有常用功能的项目
 
 ## 安装
 
-    > npm install tpack-less -g
-
-## 使用
-
-    require('tpack').build({
-        rules: [
-            {
-                src: "*.less",
-                process: require("tpack-less"),
-                dest: "*.css"
-            }
-        ]
-    });
-
+    > npm install tpack-all -g
+	> tpack-all 
