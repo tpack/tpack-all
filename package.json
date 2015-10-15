@@ -30,6 +30,6 @@
 		"tpack-es6": "*",
 		"tpack-rename": "*",
 		"tpack-sass": "*",
-		"tpack-uglify-js": "*",
+		"tpack-uglify-js": "*"
     }
 }
