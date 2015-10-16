@@ -1,47 +1,47 @@
-// ÔØÈë tpack °ü¡£
+// è½½å…¥ tpack åŒ…ã€‚
 var tpack = require("tpack");
 
-// ÉèÖÃÈ«¾ÖºöÂÔµÄÂ·¾¶¡£
+// è®¾ç½®å…¨å±€å¿½ç•¥çš„è·¯å¾„ã€‚
 tpack.ignore(".*", "_*", "$*", "*.psd", "*.ai", "*.log", "*.exe", "*.tmp", "*.db", "Desktop.ini", "tpack*", "node_modules", "dest");
 
-// È«¾ÖÍ³Ò»ÅäÖÃ¡£
+// å…¨å±€ç»Ÿä¸€é…ç½®ã€‚
 tpack.src("*.scss").pipe(require("tpack-sass")).dest("$1.css");
 tpack.src("*.less").pipe(require("tpack-less")).dest("$1.css");
 tpack.src("*.es").pipe(require("tpack-es6")).dest("$1.js");
 tpack.src("*.coffee").pipe(require("tpack-coffee-script")).dest("$1.js");
 
-// Éú³ÉÈÎÎñ¡£
+// ç”Ÿæˆä»»åŠ¡ã€‚
 tpack.task('build', function (options) {
 	
-	// Ê×ÏÈÖ´ĞĞÖ®Ç°µÄ¹æÔò¡£
+	// é¦–å…ˆæ‰§è¡Œä¹‹å‰çš„è§„åˆ™ã€‚
 	tpack.build();
 	
-	// µÚ 2 ´ÎÉú³É¡£
+	// ç¬¬ 2 æ¬¡ç”Ÿæˆã€‚
 	tpack.destPath = options.dest || "_dest/";
 	
-	// Ñ¹Ëõ CSS ºÍ JS
+	// å‹ç¼© CSS å’Œ JS
 	tpack.src("*.css").pipe(require('tpack-assets').css).pipe(require('tpack-clean-css'));
 	tpack.src("*.js").pipe(require('tpack-assets').js).pipe(require('tpack-uglify-js'));
 	
-	// ´¦Àí HTML ÀïµÄÎÄ¼şÒıÓÃ¡£
+	// å¤„ç† HTML é‡Œçš„æ–‡ä»¶å¼•ç”¨ã€‚
 	tpack.src("*.html", "*.htm").pipe(require("tpack-assets").html, {urlPostfix:"_=<md5>"});
 	
-	// ¿ªÊ¼¸ù¾İÖ®Ç°¶¨ÖÆµÄËùÓĞ¹æÔò¿ªÊ¼Éú³É²Ù×÷¡£
+	// å¼€å§‹æ ¹æ®ä¹‹å‰å®šåˆ¶çš„æ‰€æœ‰è§„åˆ™å¼€å§‹ç”Ÿæˆæ“ä½œã€‚
 	tpack.build();
 
 });
 
-// ¼àÌıÈÎÎñ¡£
+// ç›‘å¬ä»»åŠ¡ã€‚
 tpack.task('watch', function (options) {
 	tpack.watch();
 });
 
-// ·şÎñÆ÷ÈÎÎñ¡£
+// æœåŠ¡å™¨ä»»åŠ¡ã€‚
 tpack.task('server', function (options) {
 	tpack.startServer();
 });
 
-// Ö§³ÖÔÚÖ´ĞĞ node tpack.js Ê±Ö±½ÓÖ´ĞĞ default ÈÎÎñ¡£
+// æ”¯æŒåœ¨æ‰§è¡Œ node tpack.js æ—¶ç›´æ¥æ‰§è¡Œ default ä»»åŠ¡ã€‚
 if (process.mainModule === module) {
 	tpack.task('default');
 }
