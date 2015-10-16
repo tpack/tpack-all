@@ -1,17 +1,17 @@
 {
-    "name": "tpack-all",
+    "name": "tpack-web",
     "version": "1.0.0",
     "description": "包含 TPACK 所有常用功能的项目",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/tpack/tpack-all.git"
+        "url": "git+ssh://git@github.com/tpack/tpack-web.git"
     },
     "main": "./tpack.js",
     "bin": {
-        "tpack-all": "./tpack.js"
+        "tpack-web": "./tpack.js"
     },
     "bugs": {
-        "url": "https://github.com/tpack/tpack-all/issues",
+        "url": "https://github.com/tpack/tpack-web/issues",
         "email": "xuld@vip.qq.com"
     },
     "author": {
