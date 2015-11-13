@@ -1,6 +1,6 @@
 {
     "name": "tpack-web",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "包含 TPACK 所有常用功能的项目",
     "repository": {
         "type": "git",
@@ -24,12 +24,10 @@
 		"tpack-assets": "*",
 		"tpack-less": "*",
 		"tpack-autoprefixer": "*",
-		"tpack-tpack-clean-css": "*",
+		"tpack-clean-css": "*",
 		"tpack-coffee-script": "*",
 		"tpack-concat": "*",
-		"tpack-es6": "*",
-		"tpack-rename": "*",
-		"tpack-sass": "*",
+		"tpack-babel": "*",
 		"tpack-uglify-js": "*"
     }
 }
