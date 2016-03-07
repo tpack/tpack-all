@@ -6,4 +6,4 @@
 ## 安装
 
     > npm install tpack-web -g
-	> tpack-web 
+	> tpack

@@ -20,14 +20,13 @@
     },
     "license": "MIT",
     "dependencies": {
-        "tpack": "*",
-		"tpack-assets": "*",
-		"tpack-less": "*",
-		"tpack-autoprefixer": "*",
-		"tpack-clean-css": "*",
-		"tpack-coffee-script": "*",
-		"tpack-concat": "*",
-		"tpack-babel": "*",
-		"tpack-uglify-js": "*"
+        "tpack": "^2.9.0",
+		"tpack-modular": "^2.9.0",
+		"tpack-less": "^2.9.0",
+		"tpack-clean-css": "^2.9.0",
+		"tpack-coffee-script": "^2.9.0",
+		"tpack-concat": "^2.9.0",
+		"tpack-babel": "^2.9.0",
+		"tpack-uglify-js": "^2.9.0"
     }
 }
